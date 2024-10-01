@@ -343,15 +343,6 @@ def top_user_plot_1(df, year):
 
     return tuy
 
-def top_user_plot_2(df, state):
-    tuys= df[df["states"]== state]
-    tuys.reset_index(drop= True, inplace= True)
-
-    fig_top_plot_2= px.bar(tuys, x= "Quarter", y= "registeredUsers", title= "REGISTEREDUSERS, PINCODES, QUARTER",
-                        width= 1000, height= 800, color= "registeredUsers", hover_data= "pincodes",
-                        color_continuous_scale= px.colors.sequential.Magenta)
-    st.plotly_chart(fig_top_plot_2)
-
 st.set_page_config(layout="wide")
 st.title("PHONEPE DATA VISUALISATION AND EXPLORATION")
 
